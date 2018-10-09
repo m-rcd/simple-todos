@@ -3,7 +3,7 @@ Simple Todo
 
 Tasks
 ---
-Learn how to use [Meteor]](https://www.meteor.com/tutorials/react/creating-an-app)
+Learn how to use [Meteor](https://www.meteor.com/tutorials/react/creating-an-app)
 Technologies used
 ---
 - Meteor
