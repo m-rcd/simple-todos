@@ -3,6 +3,9 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { Tasks } from '../api/tasks.js';
 import Task from './Task.js';
 import ReactDOM from 'react-dom';
+import AccountsUIWrapper from './AccountsUIWrapper.js';
+import { Meteor } from 'meteor/meteor';
+
 // App component - represents the whole app
 
 class App extends Component {
@@ -21,6 +24,8 @@ class App extends Component {
        Tasks.insert({
         text,
         createdAt: new Date(), // current time
+        owner: Meteor.userId(),           // _id of logged in user
+        username: Meteor.user().username,  // username of logged in user
       });
        // Clear form
       ReactDOM.findDOMNode(this.refs.textInput).value = '';
@@ -57,7 +62,7 @@ class App extends Component {
             />
             Hide Completed Tasks
           </label>
-
+          <AccountsUIWrapper />
           <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
             <input
               type="text"
