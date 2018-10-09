@@ -1,8 +1,9 @@
-#Simple Todo
+Simple Todo
+---
 
 Tasks
 ---
-Learn how to use Meteor 
+Learn how to use Meteor
 
 Technologies used
 ---
